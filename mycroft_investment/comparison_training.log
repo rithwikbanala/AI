@@ -1,0 +1,137 @@
+Training and Comparing DQN and REINFORCE Agents
+============================================================
+
+1. Training DQN Agent...
+Training Portfolio Agent with DQN...
+============================================================
+Episode 100/500
+  Avg Reward: 3.72
+  Avg Return: 0.62%
+  Avg Sharpe Ratio: 0.003
+  Agent Stats: {'mean_reward': 3.7179564738361495, 'std_reward': 31.63952887624524, 'mean_episode_length': 252.0, 'current_epsilon': 0.6057704364907278, 'memory_size': 10000}
+
+Episode 200/500
+  Avg Reward: 1.68
+  Avg Return: -2.39%
+  Avg Sharpe Ratio: -0.049
+  Agent Stats: {'mean_reward': 1.6773443722279944, 'std_reward': 28.64683650761547, 'mean_episode_length': 252.0, 'current_epsilon': 0.3669578217261671, 'memory_size': 10000}
+
+Episode 300/500
+  Avg Reward: 6.11
+  Avg Return: 1.53%
+  Avg Sharpe Ratio: 0.063
+  Agent Stats: {'mean_reward': 6.107769170705758, 'std_reward': 27.50503017819895, 'mean_episode_length': 252.0, 'current_epsilon': 0.22229219984074702, 'memory_size': 10000}
+
+Episode 400/500
+  Avg Reward: 8.19
+  Avg Return: 3.67%
+  Avg Sharpe Ratio: 0.121
+  Agent Stats: {'mean_reward': 8.18558755171357, 'std_reward': 27.423364072598293, 'mean_episode_length': 252.0, 'current_epsilon': 0.1346580429260134, 'memory_size': 10000}
+
+Episode 500/500
+  Avg Reward: 0.62
+  Avg Return: -2.47%
+  Avg Sharpe Ratio: -0.062
+  Agent Stats: {'mean_reward': 0.6238199496041658, 'std_reward': 30.174509477673727, 'mean_episode_length': 252.0, 'current_epsilon': 0.08157186144027828, 'memory_size': 10000}
+
+
+============================================================
+Training Complete!
+============================================================
+
+Final Metrics:
+  Mean Return: 0.19% ± 30.29%
+  Mean Sharpe Ratio: 0.015 ± 0.951
+  Mean Volatility: 0.303 ± 0.054
+  Win Rate: 43.2%
+  Max Drawdown: -604.99%
+
+Learning Improvement:
+  Return: -0.35% (-95.5%)
+  Sharpe: 0.002 (11.2%)
+Figure saved to results/dqn_learning_curves.png
+Figure saved to results/dqn_analysis.png
+Figure saved to results/dqn_allocation.png
+
+Evaluating trained agent...
+  Evaluation Mean Return: 25.08% ± 27.84%
+  Evaluation Mean Sharpe: 0.801 ± 0.771
+
+Agent saved to results/dqn_agent.pkl
+
+2. Training REINFORCE Agent...
+Training Portfolio Agent with REINFORCE...
+============================================================
+Episode 100/500
+  Avg Reward: -0.37
+  Avg Return: -3.39%
+  Avg Sharpe Ratio: -0.098
+  Agent Stats: {'mean_reward': -0.37342468452325195, 'std_reward': 31.48273333423958, 'mean_episode_length': 252.0, 'mean_policy_loss': 0.005284746965844534, 'mean_entropy': 2.6978075766563414}
+
+Episode 200/500
+  Avg Reward: 2.65
+  Avg Return: -0.88%
+  Avg Sharpe Ratio: -0.012
+  Agent Stats: {'mean_reward': 2.646610280564775, 'std_reward': 30.07891995134858, 'mean_episode_length': 252.0, 'mean_policy_loss': 0.029023260450339875, 'mean_entropy': 2.5531979179382325}
+
+Episode 300/500
+  Avg Reward: 7.40
+  Avg Return: 5.41%
+  Avg Sharpe Ratio: 0.144
+  Agent Stats: {'mean_reward': 7.404746607927695, 'std_reward': 33.64686088089869, 'mean_episode_length': 252.0, 'mean_policy_loss': 0.0037285021490242798, 'mean_entropy': 2.7426862215995786}
+
+Episode 400/500
+  Avg Reward: 7.98
+  Avg Return: 7.10%
+  Avg Sharpe Ratio: 0.188
+  Agent Stats: {'mean_reward': 7.976728309026652, 'std_reward': 35.995355453982555, 'mean_episode_length': 252.0, 'mean_policy_loss': 0.0020324031879135874, 'mean_entropy': 2.7582210659980775}
+
+Episode 500/500
+  Avg Reward: 5.63
+  Avg Return: 4.61%
+  Avg Sharpe Ratio: 0.092
+  Agent Stats: {'mean_reward': 5.626769350061826, 'std_reward': 36.311724232545544, 'mean_episode_length': 252.0, 'mean_policy_loss': 0.00022145349263155367, 'mean_entropy': 2.7493660116195677}
+
+
+============================================================
+Training Complete!
+============================================================
+
+Final Metrics:
+  Mean Return: 2.57% ± 36.30%
+  Mean Sharpe Ratio: 0.063 ± 1.058
+  Mean Volatility: 0.315 ± 0.066
+  Win Rate: 46.8%
+  Max Drawdown: -683.53%
+
+Learning Improvement:
+  Return: 5.94% (1485.7%)
+  Sharpe: 0.152 (1144.3%)
+Figure saved to results/reinforce_learning_curves.png
+Figure saved to results/reinforce_analysis.png
+Figure saved to results/reinforce_allocation.png
+
+Evaluating trained agent...
+  Evaluation Mean Return: 17.18% ± 30.10%
+  Evaluation Mean Sharpe: 0.561 ± 0.687
+
+Agent saved to results/reinforce_agent.pkl
+
+============================================================
+Agent Comparison
+============================================================
+
+Return Comparison:
+  DQN:       0.19% ± 30.29%
+  REINFORCE: 2.57% ± 36.30%
+
+Sharpe Ratio Comparison:
+  DQN:       0.015 ± 0.951
+  REINFORCE: 0.063 ± 1.058
+
+Win Rate Comparison:
+  DQN:       43.2%
+  REINFORCE: 46.8%
+Figure saved to results/agent_comparison.png
+
+Comparison visualization saved to results/agent_comparison.png
